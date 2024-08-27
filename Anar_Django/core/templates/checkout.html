@@ -1,0 +1,464 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block title%}<title>Checkout || Boloba</title> {%endblock%}
+
+{%block content%}
+
+
+<!-- Mirrored from htmldemo.net/boloba/boloba/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Jun 2023 15:04:02 GMT -->
+
+	<!-- checkout area start-->
+	<!-- Checkout area -->
+	<div class="checkout-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="left-sidebar-title">
+						<ul class="page-menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a class="active" href="#">Checkout</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<!-- Payment Method -->
+					<div class="page-title">
+						<h1>Checkout</h1>
+					</div>
+					<div class="payment-method">
+						<!-- Panel Gropup -->
+						<div class="panel-group" id="accordion">
+							<!-- Panel Default -->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="check-title">
+										<a data-bs-toggle="collapse" class="active"
+											href="#checkut1">
+											Step 1: Checkout Options
+											<i class="fa fa-caret-down"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="checkut1" class="panel-collapse collapse show" data-bs-parent="#accordion">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-6">
+												<form class="checkout-form product-form">
+													<h2>New Customer</h2>
+													<div class="checkout-form-inner">
+														<p>Checkout Options:</p>
+														<div class="i-boxb">
+															<input class="checkout-radio" type="radio" name="tag"
+																id="craiot" />
+															<label class="cradio" for="craiot">Register</label>
+														</div>
+														<p>By creating an account you will be able to shop faster, be up
+															to date on an order's status, and keep track of the orders
+															you have previously made.</p>
+													</div>
+													<div class="user-bottom">
+														<button class="custom-button" type="submit"
+															value="submit"><span>Continue</span></button>
+													</div>
+												</form>
+											</div>
+											<div class="col-md-6 pt-2 pt-md-0">
+												<form class="checkout-form product-form">
+													<h2>Returning Customer</h2>
+													<div class="submit-review">
+														<p>I am a returning customer</p>
+														<div class="account-form">
+															<div class="form-group">
+																<label class="control-label"
+																	for="input-email">E-Mail</label>
+																<input id="input-email" class="form-control" type="text"
+																	placeholder="E-Mail" value="" name="email">
+															</div>
+															<div class="form-group">
+																<label class="control-label"
+																	for="input-password">Password</label>
+																<input id="input-password" class="form-control"
+																	type="password" placeholder="Password" value=""
+																	name="password">
+																<a href="#">Forgotten Password</a>
+															</div>
+														</div>
+													</div>
+													<div class="user-bottom">
+														<button class="custom-button"
+															type="button"><span>login</span></button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- End Panel Default -->
+							<!-- Panel Default -->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="check-title">
+										<a data-bs-toggle="collapse" href="#checkut2">
+											Step 2: Account & Billing Details
+											<i class="fa fa-caret-down"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="checkut2" class="panel-collapse collapse" data-bs-parent="#accordion">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="billing-left">
+													<div class="billing-form form-up">
+														<div class="form-group required">
+															<label>First Name</label>
+															<input class="form-control" type="text"
+																placeholder="First Name" value="" name="firstname">
+														</div>
+														<div class="form-group required">
+															<label>Last Name</label>
+															<input class="form-control" type="text"
+																placeholder="Last Name" value="" name="last Name">
+														</div>
+														<div class="form-group required">
+															<label>E-Mail</label>
+															<input class="form-control" type="text" placeholder="E-Mail"
+																value="" name="e-mail">
+														</div>
+														<div class="form-group required">
+															<label>Telephone</label>
+															<input class="form-control" type="text"
+																placeholder="Telephone" value="" name="telephone">
+														</div>
+														<div class="form-group required">
+															<label>Fax</label>
+															<input class="form-control" type="text" placeholder="Fax"
+																value="" name="fax">
+														</div>
+
+													</div>
+													<div class="billing-form">
+														<div class="form-group required">
+															<label>Password</label>
+															<input class="form-control" type="text"
+																placeholder="Password" value="" name="password">
+														</div>
+														<div class="form-group required">
+															<label>Password Confirm</label>
+															<input class="form-control" type="text"
+																placeholder="Password Confirm" value=""
+																name="password confirm">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="billing-form">
+													<div class="form-group required">
+														<label>Company</label>
+														<input class="form-control" type="text" placeholder="Company"
+															value="" name="company">
+													</div>
+													<div class="form-group required">
+														<label>Address 1</label>
+														<input class="form-control" type="text" placeholder="Address 1"
+															value="" name="address 1">
+													</div>
+													<div class="form-group required">
+														<label>Address 2</label>
+														<input class="form-control" type="text" placeholder="Address 2"
+															value="" name="address 2">
+													</div>
+													<div class="form-group required">
+														<label>City</label>
+														<input class="form-control" type="text" placeholder="City"
+															value="" name="city">
+													</div>
+													<div class="form-group required">
+														<label>Post Code</label>
+														<input class="form-control" type="text" placeholder="Post Code"
+															value="" name="post code">
+													</div>
+													<div class="form-group required">
+														<label>Country</label>
+														<select class="form-control">
+															<option value=""> --- Please Select --- </option>
+															<option value="244">Aaland Islands</option>
+															<option value="1">Afghanistan</option>
+															<option value="2">Albania</option>
+															<option value="3">Algeria</option>
+															<option value="4">American Samoa</option>
+															<option value="5">Andorra</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="checkbox">
+													<label>
+														<input type="checkbox" value="1" name="newsletter">
+														I wish to subscribe to the Boloba newsletter.
+													</label>
+												</div>
+												<div class="checkbox">
+													<label>
+														<input type="checkbox" checked="checked" value="1"
+															name="shipping_address">
+														My delivery and billing addresses are the same.
+													</label>
+												</div>
+												<div class="billing-bottom">
+													<button class="custom-button" type="submit"
+														value="submit"><span>Continue</span></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- End Panel Default -->
+							<!-- Panel Default -->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="check-title">
+										<a data-bs-toggle="collapse" href="#checkut3">
+											Step 3: Delivery Details
+											<i class="fa fa-caret-down"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="checkut3" class="panel-collapse collapse" data-bs-parent="#accordion">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="checkbox">
+													<label>
+														<input type="checkbox" value="1">
+														I want to use an existing address
+													</label>
+												</div>
+												<div class="checkbox">
+													<label>
+														<input type="checkbox" value="1">
+														I want to use a new address
+													</label>
+												</div>
+												<div class="billing-bottom">
+													<button class="custom-button" type="submit"
+														value="submit"><span>Continue</span></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- End Panel Default -->
+							<!-- Panel Default -->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="check-title">
+										<a data-bs-toggle="collapse" href="#checkut4">
+											Step 4: Delivery Method
+											<i class="fa fa-caret-down"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="checkut4" class="panel-collapse collapse" data-bs-parent="#accordion">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-lg-12">
+												<p>Please select the preferred shipping method to use on this order.</p>
+												<p>
+													<strong>Flat Rate</strong>
+												</p>
+												<div class="checkbox">
+													<label>
+														<input type="checkbox" value="1">
+														Flat Shipping Rate - $5.00
+													</label>
+												</div>
+												<p>
+													<strong>Add Comments About Your Order</strong>
+												</p>
+												<p><textarea class="form-control" rows="8" name="comment"></textarea></p>
+												<div class="billing-bottom">
+													<button class="custom-button" type="submit"
+														value="submit"><span>Continue</span></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- End Panel Default -->
+							<!-- Panel Default -->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="check-title">
+										<a data-bs-toggle="collapse" href="#checkut5">
+											Step 5: Payment Method
+											<i class="fa fa-caret-down"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="checkut5" class="panel-collapse collapse" data-bs-parent="#accordion">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-lg-12">
+												<p>Please select the preferred payment method to use on this order.</p>
+												<div class="checkbox">
+													<label>
+														<input type="checkbox" value="1">
+														Cash On Delivery
+													</label>
+												</div>
+												<p>
+													<strong>Add Comments About Your Order</strong>
+												</p>
+												<p><textarea class="form-control" rows="8" name="comment"></textarea></p>
+												<div class="billing-bottom">
+													<button class="custom-button" type="submit"
+														value="submit"><span>Continue</span></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Panel Default -->
+							<!-- Panel Default -->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="check-title">
+										<a data-bs-toggle="collapse" href="#checkut6">
+											Step 6: Confirm Order
+											<i class="fa fa-caret-down"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="checkut6" class="panel-collapse collapse" data-bs-parent="#accordion">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-12">
+												<div class="table-responsive">
+													<table class="table table-bordered">
+														<thead>
+															<tr>
+																<td>Product Name</td>
+																<td>Model</td>
+																<td class="text-right">Quantity</td>
+																<td class="text-right">Unit Price</td>
+																<td class="text-right">Total</td>
+															</tr>
+														</thead>
+														<tr>
+															<td><a href="#">Aenean qua</a></td>
+															<td>SAM1</td>
+															<td class="text-right">1</td>
+															<td class="text-right">$159.00</td>
+															<td class="text-right">$159.00</td>
+														</tr>
+														<tr>
+															<td class="text-right" colspan="4">
+																<strong>Sub-Total:</strong>
+															</td>
+															<td class="text-right">$159.00</td>
+														</tr>
+														<tr>
+															<td class="text-right" colspan="4">
+																<strong>Flat Shipping Rate:</strong>
+															</td>
+															<td class="text-right">$5.00</td>
+														</tr>
+														<tr>
+															<td class="text-right" colspan="4">
+																<strong>Eco Tax (-2.00):</strong>
+															</td>
+															<td class="text-right">$4.00</td>
+														</tr>
+														<tr>
+															<td class="text-right" colspan="4">
+																<strong>VAT (20%):</strong>
+															</td>
+															<td class="text-right">$32.80</td>
+														</tr>
+														<tr>
+															<td class="text-right" colspan="4">
+																<strong>Total:</strong>
+															</td>
+															<td class="text-right">$200.80</td>
+														</tr>
+													</table>
+												</div>
+												<div class="billing-bottom">
+													<button class="custom-button" type="submit"
+														value="submit"><span>Continue</span></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Panel Default -->
+						</div>
+						<!-- End Panel Gropup -->
+					</div>
+					<!-- End Payment Method -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end discount area -->
+	<!-- checkout area end-->
+	<!-- ours-brand-area start-->
+	<div class="ours-brand-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-heading">
+						<h3>Ours Brand</h3>
+					</div>
+					<div class="brand-crousel indicator-style">
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{%endblock%}
+	

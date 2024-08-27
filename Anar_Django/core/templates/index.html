@@ -1,0 +1,3097 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block title%}<title>Home-Page 1 || Boloba</title>{%endblock%}
+
+{%block content%}
+
+
+    <!-- slider-area start-->
+    <div class="slider-area">
+      <div class="bend niceties preview-2">
+        <div id="ensign-nivoslider" class="slides">
+          <img
+            src="{% static 'img/slider/bg-slider-home1.jpg' %} "
+            alt=""
+            title="#slider-direction-1"
+          />
+          <img
+            src="{% static 'img/slider/bg-slider-home1.jpg'%}"
+            alt=""
+            title="#slider-direction-2"
+          />
+        </div>
+        <!-- direction 1 -->
+        <div id="slider-direction-1" class="slider-direction slider-one">
+          <div class="slider-progress"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="slider-content d-none d-md-block">
+                  <!-- layer-1-heading-->
+                  <div class="layer-heading layer-1-heading">
+                    <h2 class="title1">Save on the Award Winning</h2>
+                    <h1 class="title2">Sony A600</h1>
+                  </div>
+                  <!-- layer-1-detials -->
+                  <div class="layer-1-details">
+                    <p class="title3">
+                      Save $50 on a600 or bundle with lens and <br />
+                      memory card to save an additional $ 150.00
+                    </p>
+                  </div>
+                  <!-- layer-1-button -->
+                  <div class="layer-button d-none d-lg-inline-block">
+                    <a href="#" class="slider-btn">shopping now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <!-- layer-1-img -->
+                <div class="layer-1-img">
+                  <img
+                    src="{% static 'img/slider/slider-caption1.png'%}"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- direction 2 -->
+        <div id="slider-direction-2" class="slider-direction slider-two">
+          <div class="slider-progress"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="slider-content d-none d-md-block">
+                  <!-- layer-2-heading -->
+                  <div class="layer-heading layer-2-heading">
+                    <h2 class="title1">Sale 50% for everyone</h2>
+                    <h1 class="title2">Apple Watch</h1>
+                  </div>
+                  <!-- layer-2- list -->
+                  <div class="layer-2-list">
+                    <ul>
+                      <li>Save $50 on a600</li>
+                      <li>Bundle with lens and memory card</li>
+                      <li>Save an additional $ 150.00</li>
+                    </ul>
+                  </div>
+                  <!-- layer-2-button -->
+                  <div class="layer-button d-none d-lg-inline-block">
+                    <a href="#" class="slider-btn">shopping now</a>
+                  </div>
+                </div>
+                <!-- layer-2-img -->
+                <div class="layer-2-img">
+                  <img
+                    src="{% static 'img/slider/slider-caption2.png'%}"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- slider-area end-->
+    <!-- product-tab-area start-->
+    <div class="product-tab-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="product-tab">
+              <ul class="product-nav nav" role="tablist">
+                <li role="presentation">
+                  <a
+                    class="active"
+                    href="#latest"
+                    aria-controls="latest"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    >latest</a
+                  >
+                </li>
+                <li role="presentation">
+                  <a
+                    href="#sale"
+                    aria-controls="sale"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    >sale</a
+                  >
+                </li>
+                <li role="presentation">
+                  <a
+                    href="#random"
+                    aria-controls="random"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    >random</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content">
+                <!--latest tab start-->
+                <div id="latest" role="tabpanel" class="tab-pane active">
+                  <div class="gutter-space-30">
+                    <div class="product-crousel indicator-style">
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <span class="discount">-20%</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/19.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/11.png'%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">Aenean qua</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$159.00</span>
+                              <span class="old-price">$199.99</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png'%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/18.png'%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/10.png'%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">suscipit quis</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$100.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png'%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <span class="discount">-81%</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/17.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/24.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">nec odio</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$19.00</span>
+                              <span class="old-price">$100.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/16.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/1.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">cubilia Cura</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$1,000.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/15.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/6.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">pulvinar ullam</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$2,000.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <span class="discount">-90%</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/21.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/14.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">blandit vel</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$99.00</span>
+                              <span class="old-price">$1,000.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/13.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/10.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">ullamcorper</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$500.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <span class="discount">-10%</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/12.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/1.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">ipsum dolor</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$90.00</span>
+                              <span class="old-price">$100.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/11.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/5.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">tellus sed</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$100.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/10.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/7.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">aptent taciti</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$20.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--latest tab end-->
+                <!--sale tab start-->
+                <div id="sale" role="tabpanel" class="tab-pane">
+                  <div class="gutter-space-30">
+                    <div class="product-crousel indicator-style">
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="discount">-20%</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/3.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/10.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">adipiscing elit</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$80.00</span>
+                              <span class="old-price">$100.99</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <span class="discount">-20%</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/19.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/11.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">Aenean qua</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$159.00</span>
+                              <span class="old-price">$199.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <span class="discount">-90%</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/14.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/21.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">blandit vel</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$99.00</span>
+                              <span class="old-price">$1,000.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <span class="discount">-10%</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/12.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/1.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">ipsum dolor</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$90.00</span>
+                              <span class="old-price">$100.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <span class="discount">-81%</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/17.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/24.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">nec odio</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$19.00</span>
+                              <span class="old-price">$100.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--sale tab end-->
+                <!--random tab start-->
+                <div id="random" role="tabpanel" class="tab-pane">
+                  <div class="gutter-space-30">
+                    <div class="product-crousel indicator-style">
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/8.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/19.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">tincidunt ma</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$100.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/2.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/1.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">Palm Treo Pro</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$279.99</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/7.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/5.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">ullamcorper</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$100.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/10.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/17.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">aptent taciti</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$20.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <span class="discount">-20%</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/19.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/11.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">Aenean qua</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$159.00</span>
+                              <span class="old-price">$199.99</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/6.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/3.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">tortor nequ</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$200.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/11.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/15.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">tellus sed</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$100.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/1.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/6.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">Fusce nec</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$100.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/18.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/10.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">suscipit quis</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$100.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-item">
+                        <div class="product-single">
+                          <div class="product-img">
+                            <span class="new">New</span>
+                            <span class="discount">-90%</span>
+                            <a href="#">
+                              <img
+                                class="primary-img"
+                                src="{% static 'img/product/14.png '%}"
+                                alt=""
+                              />
+                              <img
+                                class="secondary-img"
+                                src="{% static 'img/product/21.png '%}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h2><a href="#">blandit vel</a></h2>
+                            <div class="pro-price">
+                              <span class="new-price">$99.00</span>
+                              <span class="old-price">$1,000.00</span>
+                            </div>
+                            <div class="pro-rating">
+                              <img
+                                src="{% static 'img/rating/rating.png '%}"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="action">
+                            <div class="add-to-cart">
+                              <a href="#">Add to cart</a>
+                            </div>
+                            <div class="add-to-link">
+                              <a
+                                class="add-to-wishlist"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to Wish List"
+                              >
+                                <i class="fa fa-heart-o"></i>
+                                Add to Wish List
+                              </a>
+                              <a
+                                class="add-to-compare"
+                                href="#"
+                                data-bs-toggle="tooltip"
+                                data-placement="top"
+                                title="Add to compare"
+                              >
+                                <i class="fa fa-signal"></i>
+                                Add to compare
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--random tab end-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="banner">
+              <a href="#">
+                <img src="{% static 'img/banner/banner1.jpg'%}" alt="" />
+              </a>
+              <div class="banner-sale">
+                <h3>sale of 50%</h3>
+              </div>
+              <div class="banner-text">
+                <h2>nokia lumina</h2>
+                <a href="#">Shopping now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- product-tab-area end-->
+    <!-- features-product-area start-->
+    <div class="features-product-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading">
+              <h3>Featured Products</h3>
+            </div>
+            <div class="gutter-space-30">
+              <div class="features-crousel indicator-style">
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/3.png '%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/10.png '%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">adipiscing elit</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$80.00</span>
+                        <span class="old-price">$100.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png '%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/10.png '%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/17.png '%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">aptent taciti</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$20.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png '%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <span class="discount">-20%</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/19.png '%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/11.png '%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">Aenean qua</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$159.00</span>
+                        <span class="new-price">$199.99</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png '%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <span class="discount">-90%</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/14.png '%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/21.png '%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">blandit vel</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$99.00</span>
+                        <span class="old-price">$1,000.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png '%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/16.png '%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/1.png '%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">cubilia Cura</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$1,000.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png '%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/1.png '%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/6.png '%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">Fusce nec</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$100.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png '%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- features-product-area end-->
+    <!-- banner-area start-->
+    <div class="banner-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="banner2">
+              <img src="{% static 'img/banner/banner2.jpg'%}" alt="" />
+              <div class="banner2-text">
+                <h2>lenovo plus</h2>
+                <h3>Sale up to 30%</h3>
+                <a href="#">Shopping now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="banner2 banner2-bottom">
+              <img src="{% static 'img/banner/banner3.jpg'%}" alt="" />
+              <div class="banner2-text">
+                <h2>nikon d70</h2>
+                <h3>new arrivals</h3>
+                <a href="#">Shopping now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- banner-area end-->
+    <!-- new-product-area start-->
+    <div class="new-product-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4">
+            <div class="section-heading">
+              <h3>Best seller</h3>
+            </div>
+            <div class="gutter-space-30">
+              <div class="best-seller-crousel indicator-style">
+                <div class="slide-item">
+                  <div class="best-seller-single">
+                    <div class="product-single">
+                      <div class="product-img">
+                        <a href="#">
+                          <img
+                            class="primary-img"
+                            src="{% static 'img/product/17.png '%}"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-content">
+                        <h2><a href="#">Aenean qua</a></h2>
+                        <div class="pro-rating">
+                          <img
+                            src="{% static 'img/rating/rating.png '%}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="pro-price">
+                          <span class="old-price">$199.99</span>
+                          <span class="new-price">$159.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-single">
+                      <div class="product-img">
+                        <a href="#">
+                          <img
+                            class="primary-img"
+                            src="{% static 'img/product/19.png '%}"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-content">
+                        <h2><a href="#">Aenean qua</a></h2>
+                        <div class="pro-rating">
+                          <img
+                            src="{% static 'img/rating/rating.png '%}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="pro-price">
+                          <span class="old-price">$199.99</span>
+                          <span class="new-price">$159.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-single">
+                      <div class="product-img">
+                        <a href="#">
+                          <img
+                            class="primary-img"
+                            src="{% static 'img/product/18.png '%}"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-content">
+                        <h2><a href="#">Aenean qua</a></h2>
+                        <div class="pro-rating">
+                          <img
+                            src="{% static 'img/rating/rating.png '%}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="pro-price">
+                          <span class="new-price">$159.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-single bestseller-style">
+                      <div class="product-img">
+                        <a href="#">
+                          <img
+                            class="primary-img"
+                            src="{% static 'img/product/10.png '%}"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-content">
+                        <h2><a href="#">Aenean qua</a></h2>
+                        <div class="pro-rating">
+                          <img
+                            src="{% static 'img/rating/rating.png '%}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="pro-price">
+                          <span class="new-price">$159.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="best-seller-single">
+                    <div class="product-single">
+                      <div class="product-img">
+                        <a href="#">
+                          <img
+                            class="primary-img"
+                            src="{% static 'img/product/10.png'%}"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-content">
+                        <h2><a href="#">Aenean qua</a></h2>
+                        <div class="pro-rating">
+                          <img
+                            src="{% static 'img/rating/rating.png'%}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="pro-price">
+                          <span class="new-price">$159.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-single">
+                      <div class="product-img">
+                        <a href="#">
+                          <img
+                            class="primary-img"
+                            src="{% static 'img/product/12.png'%}"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-content">
+                        <h2><a href="#">Aenean qua</a></h2>
+                        <div class="pro-rating">
+                          <img
+                            src="{% static 'img/rating/rating.png'%}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="pro-price">
+                          <span class="old-price">$100.00</span>
+                          <span class="new-price">$90.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-single">
+                      <div class="product-img">
+                        <a href="#">
+                          <img
+                            class="primary-img"
+                            src="{% static 'img/product/14.png'%}"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-content">
+                        <h2><a href="#">Aenean qua</a></h2>
+                        <div class="pro-rating">
+                          <img
+                            src="{% static 'img/rating/rating.png'%}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="pro-price">
+                          <span class="old-price">$1000.00</span>
+                          <span class="new-price">$99.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-single bestseller-style">
+                      <div class="product-img">
+                        <a href="#">
+                          <img
+                            class="primary-img"
+                            src="{% static 'img/product/13.png'%}"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-content">
+                        <h2><a href="#">Aenean qua</a></h2>
+                        <div class="pro-rating">
+                          <img
+                            src="{% static 'img/rating/rating.png'%}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="pro-price">
+                          <span class="new-price">$159.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-8">
+            <div class="section-heading">
+              <h3>New Products</h3>
+            </div>
+            <div class="gutter-space-30">
+              <div class="new-product-crousel indicator-style">
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <span class="discount">-20%</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/19.png'%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/11.png'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">Aenean qua</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$159.00</span>
+                        <span class="old-price">$199.99</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png'%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/18.png'%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/10.png'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">suscipit quis</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$100.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png'%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <span class="discount">-81%</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/17.png'%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/24.png'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">nec odio</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$19.00</span>
+                        <span class="old-price">$100.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png'%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/16.png'%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/1.png'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">cubilia Cura</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$1,000.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png'%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/15.png'%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/6.png'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">pulvinar ullam</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$2,000.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png'%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <span class="discount">-90%</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/21.png'%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/14.png'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">blandit vel</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$99.00</span>
+                        <span class="old-price">$1,000.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png'%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/13.png'%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/10.png'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      '%}
+                      <h2><a href="#">ullamcorper</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$500.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png'%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <span class="discount">-10%</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/12.png'%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/1.png'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">ipsum dolor</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$90.00</span>
+                        <span class="old-price">$100.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png'%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/11.png'%}'%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/5.png'%}'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">tellus sed</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$100.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png'%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="product-single">
+                    <div class="product-img">
+                      <span class="new">New</span>
+                      <a href="#">
+                        <img
+                          class="primary-img"
+                          src="{% static 'img/product/10.png'%}'%}"
+                          alt=""
+                        />
+                        <img
+                          class="secondary-img"
+                          src="{% static 'img/product/7.png'%}'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2><a href="#">aptent taciti</a></h2>
+                      <div class="pro-price">
+                        <span class="new-price">$20.00</span>
+                      </div>
+                      <div class="pro-rating">
+                        <img
+                          src="{% static 'img/rating/rating.png'%}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="action">
+                      <div class="add-to-cart">
+                        <a href="#">Add to cart</a>
+                      </div>
+                      <div class="add-to-link">
+                        <a
+                          class="add-to-wishlist"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to Wish List"
+                        >
+                          <i class="fa fa-heart-o"></i>
+                          Add to Wish List
+                        </a>
+                        <a
+                          class="add-to-compare"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-placement="top"
+                          title="Add to compare"
+                        >
+                          <i class="fa fa-signal"></i>
+                          Add to compare
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- new-product-area end-->
+    <!-- ours-brand-area start-->
+    <div class="ours-brand-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading">
+              <h3>Ours Brand</h3>
+            </div>
+            <div class="brand-crousel indicator-style">
+              <div class="brand-single">
+                <a href="#"
+                  ><img src="{% static 'img/brand/1.png'%}" alt=""
+                /></a>
+              </div>
+              <div class="brand-single">
+                <a href="#"
+                  ><img src="{% static 'img/brand/1.png'%}" alt=""
+                /></a>
+              </div>
+              <div class="brand-single">
+                '%}'%}
+                <a href="#"
+                  ><img src="{% static 'img/brand/1.png'%}" alt=""
+                /></a>
+              </div>
+              <div class="brand-single">
+                <a href="#"
+                  ><img src="{% static 'img/brand/1.png'%}" alt=""
+                /></a>
+              </div>
+              <div class="brand-single">
+                <a href="#"
+                  ><img src="{% static 'img/brand/1.png'%}" alt=""
+                /></a>
+              </div>
+              <div class="brand-single">
+                <a href="#"
+                  ><img src="{% static 'img/brand/1.png'%}" alt=""
+                /></a>
+              </div>
+              <div class="brand-single">
+                <a href="#"
+                  ><img src="{% static 'img/brand/1.png'%}" alt=""
+                /></a>
+              </div>
+              <div class="brand-single">
+                <a href="#"
+                  ><img src="{% static 'img/brand/1.png'%}" alt=""
+                /></a>
+              </div>
+              <div class="brand-single">
+                <a href="#"
+                  ><img src="{% static 'img/brand/1.png'%}" alt=""
+                /></a>
+              </div>
+              <div class="brand-single">
+                <a href="#"
+                  ><img src="{% static 'img/brand/1.png'%}" alt=""
+                /></a>
+              </div>
+              <div class="brand-single">
+                <a href="#"
+                  ><img src="{% static 'img/brand/1.png'%}" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ours-brand-area end-->
+    <!-- recent-post-area start-->
+    <div class="recent-post-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading">
+              <h3>Recent Post</h3>
+            </div>
+            <div class="gutter-space-30">
+              <div class="recent-post-crousel indicator-style">
+                <div class="slide-item">
+                  <div class="post-single">
+                    <div class="post-img">
+                      <a href="#"
+                        ><img
+                          src="{% static 'img/recent-post/1.jpg'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="post-content">
+                      <div class="content-heading">
+                        <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                      </div>
+                      <div class="content-details">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit, sed diam nonummy nibh euismod tincidunt. Lorem
+                          ipsum dolor sit amet, consectetuer...
+                        </p>
+                      </div>
+                      <div class="content-comment">
+                        <span class="entry-date"> Jul 07, 2022 </span>
+                        <span class="entry-comment">
+                          <i class="fa fa-user"></i>
+                          BootExperts
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="post-single">
+                    <div class="post-img">
+                      <a href="#"
+                        ><img
+                          src="{% static 'img/recent-post/2.jpg'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="post-content">
+                      <div class="content-heading">
+                        <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                      </div>
+                      <div class="content-details">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit, sed diam nonummy nibh euismod tincidunt. Lorem
+                          ipsum dolor sit amet, consectetuer...
+                        </p>
+                      </div>
+                      <div class="content-comment">
+                        <span class="entry-date"> Jul 07, 2022 </span>
+                        <span class="entry-comment">
+                          <i class="fa fa-user"></i>
+                          BootExperts
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="post-single">
+                    <div class="post-img">
+                      <a href="#"
+                        ><img src="{% static 'img/recent-post/3.jpg'%}" alt=""
+                      /></a>
+                    </div>
+                    <div class="post-content">
+                      <div class="content-heading">
+                        <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                      </div>
+                      <div class="content-details">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit, sed diam nonummy nibh euismod tincidunt. Lorem
+                          ipsum dolor sit amet, consectetuer...
+                        </p>
+                      </div>
+                      <div class="content-comment">
+                        <span class="entry-date"> Jul 07, 2022 </span>
+                        <span class="entry-comment">
+                          <i class="fa fa-user"></i>
+                          BootExperts
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="post-single">
+                    <div class="post-img">
+                      <a href="#"
+                        ><img
+                          src="{% static 'img/recent-post/1.jpg'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="post-content">
+                      <div class="content-heading">
+                        <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                      </div>
+                      <div class="content-details">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit, sed diam nonummy nibh euismod tincidunt. Lorem
+                          ipsum dolor sit amet, consectetuer...
+                        </p>
+                      </div>
+                      <div class="content-comment">
+                        <span class="entry-date"> Jul 07, 2022 </span>
+                        <span class="entry-comment">
+                          <i class="fa fa-user"></i>
+                          BootExperts
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="post-single">
+                    <div class="post-img">
+                      <a href="#"
+                        ><img
+                          src="{% static 'img/recent-post/4.jpg'%}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="post-content">
+                      <div class="content-heading">
+                        <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                      </div>
+                      <div class="content-details">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit, sed diam nonummy nibh euismod tincidunt. Lorem
+                          ipsum dolor sit amet, consectetuer...
+                        </p>
+                      </div>
+                      <div class="content-comment">
+                        <span class="entry-date"> Jul 07, 2022 </span>
+                        <span class="entry-comment">
+                          <i class="fa fa-user"></i>
+                          Plaza themes
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- recent-post-area end-->
+    <!-- footer start-->
+   {%endblock%}

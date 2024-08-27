@@ -1,0 +1,813 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block title%}<title>Shop || Boloba</title>{%endblock%}
+
+{%block content%}
+	<!-- shop page area start -->
+	<div class="shop-product-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 order-2 order-lg-1">
+					<!-- Left Sidebar-->
+					<div class="left-sidebar">
+						<div class="left-sidebar-title">
+							<ul class="page-menu">
+								<li>
+									<a href="index.html">Home</a>
+								</li>
+								<li>
+									<a class="active" href="#">Cameras</a>
+								</li>
+							</ul>
+						
+						</div>
+						<div class="left-layout">
+							<!-- start Price Filter Area -->
+							<div class="price-filter-area single-layout">
+								<div class="price-filter">
+									<div class="layout-title">
+										<h4>Price</h4>
+									</div>
+									<p>
+										<input type="text" id="amount" readonly
+											style="border:0; color:#F3652A; font-weight:bold;">
+									</p>
+									<div id="slider-range"></div>
+								</div>
+							</div>
+							<!-- End Price Filter Area -->
+							<div class="single-layout">
+								<div class="layout-title">
+									<h4>Category</h4>
+								</div>
+								<div class="layout-list">
+									<ul>
+										<li><a href="#">Fashion & Beauty 1 (14)</a></li>
+										<li><a href="#">Fashion & Beauty 2 (14)</a></li>
+										<li><a href="#">Fashion & Beauty 3 (15)</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="single-layout">
+								<div class="layout-title">
+									<h4>color</h4>
+								</div>
+								<div class="layout-list">
+									<ul>
+										<li><a href="#">Black (15)</a></li>
+										<li><a href="#">Blue (15)</a></li>
+										<li><a href="#">Brown (12)</a></li>
+										<li><a href="#">Pink (12)</a></li>
+										<li><a href="#">Red (11)</a></li>
+										<li><a href="#">White (15)</a></li>
+										<li><a href="#">Yellow (12)</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="single-layout">
+								<div class="layout-title">
+									<h4>Manufacturer</h4>
+								</div>
+								<div class="layout-list">
+									<ul>
+										<li><a href="#">Adidas (15)</a></li>
+										<li><a href="#">Chanel (16)</a></li>
+										<li><a href="#">Dolce (16)</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-9 order-1 order-lg-2 pt-4 pt-md-0">
+					<div class="shop-page-banner">
+						<img src="{%static 'img/banner/shop-page-banner.png'%}" alt="" />
+					</div>
+					<div class="shop-product-view">
+						<!-- Shop Product Tab Area -->
+						<div class="shop-tab-area">
+							<!-- Tab Bar -->
+							<div class="tab-bar">
+								<div class="tab-bar-left">
+									<div class="tab-bar-inner">
+										<ul class="nav nav-tabs" role="tablist">
+											<li><a class="active" href="#shop-grid" data-bs-toggle="tab"><i class="fa fa-th"></i></a>
+											</li>
+											<li><a href="#shop-list" data-bs-toggle="tab"><i
+														class="fa fa-th-list"></i></a></li>
+										</ul>
+									</div>
+									<div class="sorter d-none d-lg-inline-block">
+										<div class="sort-by">
+											<label>Sort By:</label>
+											<select>
+												<option value="position">Default</option>
+												<option value="name">Name (A - Z)</option>
+												<option value="price">Name (Z - A)</option>
+												<option value="price">Price (Low > High)</option>
+												<option value="price">Price (High > Low)</option>
+												<option value="price">Rating (Highest)</option>
+												<option value="price">Rating (Lowest)</option>
+												<option value="price">Model (A - Z)</option>
+												<option value="price">Model (Z - A)</option>
+											</select>
+										</div>
+									</div>
+
+								</div>
+								<div class="toolbar">
+									<div class="pager-list">
+										<div class="limiter">
+											<label>Show</label>
+											<select>
+												<option value="9">9</option>
+												<option value="25">25</option>
+												<option value="50">50</option>
+												<option value="75">75</option>
+												<option value="100">100</option>
+											</select>
+										</div>
+									</div>
+									<div class="pages">
+										<ol>
+											<li class="current">1</li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">></a></li>
+											<li><a href="#">>|</a></li>
+										</ol>
+									</div>
+								</div>
+							</div>
+							<!-- End Tab Bar -->
+							<!-- Tab Content -->
+							<div class="tab-content">
+								<div id="shop-grid" class="tab-pane active" role="tabpanel">
+									<div class="row">
+										{% for item in data %}
+										{% if item.is_publised %}
+										<!-- single-product start -->
+										<div class="col-lg-4 col-md-6 shop-single-item">
+											<div class="product-single">
+												<div class="product-img">
+													{% if item.is_new %}
+													<span class="new">New</span>
+													{%endif%}
+													{% if item.endirim %}
+													<span class="discount">{{item.endirim}}%</span>
+													{%endif%}
+													<a href="{% url 'singleProduct' item.pk %}">
+														<img class="primary-img" src="{{item.image.url}}"
+															alt="" />
+														<img class="secondary-img" src="{{item.imageHover.url}}"
+															alt="" />
+													</a>
+													{% for i in item.detal_Image.url.all %}
+													<img class="secondary-img" src="{{i.url}}"
+														alt="" />
+
+													{%endfor%}
+												</div>
+												<div class="product-content">
+													<h2><a href="#">{{item.name}}</a></h2>
+													<div class="pro-price">
+														<span class="new-price">${{item.price}}</span>
+														{% if item.delprice %}
+														<span class="old-price">${{item.delprice}}</span>
+														{% endif %}
+													</div>
+													<div class="pro-rating">
+														<img src="{%static 'img/rating/rating.png'%}" alt="" />
+													</div>
+												</div>
+												<div class="action">
+													<div class="add-to-cart">
+														<a href="#">Add to cart</a>
+													</div>
+													<div class="add-to-link">
+														<a class="add-to-wishlist" href="#" data-bs-toggle="tooltip"
+															data-placement="top" title="Add to Wish List">
+															<i class="fa fa-heart-o"></i>
+															Add to Wish List
+														</a>
+														<a class="add-to-compare" href="#" data-bs-toggle="tooltip"
+															data-placement="top" title="Add to compare">
+															<i class="fa fa-signal"></i>
+															Add to compare
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										{%endif%}
+										<!-- single-product end -->
+										{% endfor %}
+									</div>
+								</div>
+								<div id="shop-list" class="tab-pane shop-list" role="tabpanel">
+									<div class="row">
+										<!-- single blog start -->
+										<div class="product-single">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="product-img">
+														<span class="new">New</span>
+														<a href="#">
+															<img class="primary-img" src="{%static 'img/product/3.png'%}"
+																alt="" />
+															<img class="secondary-img" src="{%static 'img/product/10.png'%}"
+																alt="" />
+														</a>
+													</div>
+												</div>
+												<div class="col-md-8">
+													<div class="product-details">
+														<div class="product-content">
+															<h2><a href="#">adipiscing elit</a></h2>
+															<div class="pro-price">
+																<span class="new-price">$279.99</span>
+															</div>
+															<div class="pro-rating">
+																<img src="{%static 'img/rating/rating.png'%}" alt="" />
+															</div>
+														</div>
+														<div class="product-reveiw">
+															Canon's press material for the EOS 5D states that it
+															'defines
+															(a) new D-SLR category', while we're not typically too
+															concerned
+															with marketing talk this particular statement is clearly
+															pretty
+															accurate. The EOS 5D is unlike any previous digital SLR in
+															that
+															it combines a full-frame (35 mm sized) hig . . .<a
+																class="readmore" href="#">Read more</a>
+														</div>
+														<div class="action">
+															<div class="add-to-cart">
+																<a href="#">Add to cart</a>
+															</div>
+															<div class="add-to-link">
+																<a class="add-to-wishlist" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to Wish List">
+																	<i class="fa fa-heart-o"></i>
+																	Add to Wish List
+																</a>
+																<a class="add-to-compare" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to compare">
+																	<i class="fa fa-signal"></i>
+																	Add to compare
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- single blog end -->
+										<!-- single blog start -->
+										<div class="product-single">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="product-img">
+														<span class="new">New</span>
+														<span class="discount">-10%</span>
+														<a href="#">
+															<img class="primary-img" src="{%static 'img/product/14.png'%}"
+																alt="" />
+															<img class="secondary-img" src="{%static 'img/product/21.png'%}"
+																alt="" />
+														</a>
+													</div>
+												</div>
+												<div class="col-md-8">
+													<div class="product-details">
+														<div class="product-content">
+															<h2><a href="#">blandit vel</a></h2>
+															<div class="pro-price">
+																<span class="new-price">$279.99</span>
+															</div>
+															<div class="pro-rating">
+																<img src="{%static 'img/rating/rating.png'%}" alt="" />
+															</div>
+														</div>
+														<div class="product-reveiw">
+															MacBook Air is ultrathin, ultraportable, and ultra unlike
+															anything else. But you don’t lose inches and pounds
+															overnight.
+															It’s the result of rethinking conventions. Of multiple
+															wireless
+															innovations. And of breakthrough design. With MacBook Air,
+															mobile computing suddenly has a new standard. .. . . .<a
+																class="readmore" href="#">Read more</a>
+														</div>
+														<div class="action">
+															<div class="add-to-cart">
+																<a href="#">Add to cart</a>
+															</div>
+															<div class="add-to-link">
+																<a class="add-to-wishlist" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to Wish List">
+																	<i class="fa fa-heart-o"></i>
+																	Add to Wish List
+																</a>
+																<a class="add-to-compare" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to compare">
+																	<i class="fa fa-signal"></i>
+																	Add to compare
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- single blog end -->
+										<!-- single blog start -->
+										<div class="product-single">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="product-img">
+														<span class="new">New</span>
+														<span class="discount">-10%</span>
+														<a href="#">
+															<img class="primary-img" src="{%static 'img/product/16.png'%}"
+																alt="" />
+															<img class="secondary-img" src="{%static 'img/product/1.png'%}"
+																alt="" />
+														</a>
+													</div>
+												</div>
+												<div class="col-md-8">
+													<div class="product-details">
+														<div class="product-content">
+															<h2><a href="#">cubilia Cura</a></h2>
+															<div class="pro-price">
+																<span class="new-price">$279.99</span>
+															</div>
+															<div class="pro-rating">
+																<img src="{%static 'img/rating/rating.png'%}" alt="" />
+															</div>
+														</div>
+														<div class="product-reveiw">
+															Unprecedented power. The next generation of processing
+															technology has arrived. Built into the newest VAIO notebooks
+															lies Intel's latest, most powerful innovation yet: Intel®
+															Centrino® 2 processor technology. Boasting incredible speed,
+															expanded wireless connectivity, enhanced multimedia support
+															. .
+															.<a class="readmore" href="#">Read more</a>
+														</div>
+														<div class="action">
+															<div class="add-to-cart">
+																<a href="#">Add to cart</a>
+															</div>
+															<div class="add-to-link">
+																<a class="add-to-wishlist" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to Wish List">
+																	<i class="fa fa-heart-o"></i>
+																	Add to Wish List
+																</a>
+																<a class="add-to-compare" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to compare">
+																	<i class="fa fa-signal"></i>
+																	Add to compare
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- single blog end -->
+										<!-- single blog start -->
+										<div class="product-single">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="product-img">
+														<span class="new">New</span>
+														<span class="discount">-10%</span>
+														<a href="#">
+															<img class="primary-img" src="{%static 'img/product/1.png'%}"
+																alt="" />
+															<img class="secondary-img" src="{%static 'img/product/6.png'%}"
+																alt="" />
+														</a>
+													</div>
+												</div>
+												<div class="col-md-8">
+													<div class="product-details">
+														<div class="product-content">
+															<h2><a href="#">Fusce nec</a></h2>
+															<div class="pro-price">
+																<span class="new-price">$279.99</span>
+															</div>
+															<div class="pro-rating">
+																<img src="{%static 'img/rating/rating.png'%}" alt="" />
+															</div>
+														</div>
+														<div class="product-reveiw">
+															HTC Touch - in High Definition. Watch music videos and
+															streaming
+															content in awe-inspiring high definition clarity for a
+															mobile
+															experience you never thought possible. Seductively sleek,
+															the
+															HTC Touch HD provides the next generation of mobile
+															functionality, all at a simple touch. Fully integrated w . .
+															.<a class="readmore" href="#">Read more</a>
+														</div>
+														<div class="action">
+															<div class="add-to-cart">
+																<a href="#">Add to cart</a>
+															</div>
+															<div class="add-to-link">
+																<a class="add-to-wishlist" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to Wish List">
+																	<i class="fa fa-heart-o"></i>
+																	Add to Wish List
+																</a>
+																<a class="add-to-compare" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to compare">
+																	<i class="fa fa-signal"></i>
+																	Add to compare
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- single blog end -->
+										<!-- single blog start -->
+										<div class="product-single">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="product-img">
+														<span class="new">New</span>
+														<span class="discount">-10%</span>
+														<a href="#">
+															<img class="primary-img" src="{%static 'img/product/12.png'%}"
+																alt="" />
+															<img class="secondary-img" src="{%static 'img/product/1.png'%}"
+																alt="" />
+														</a>
+													</div>
+												</div>
+												<div class="col-md-8">
+													<div class="product-details">
+														<div class="product-content">
+															<h2><a href="#">ipsum dolor</a></h2>
+															<div class="pro-price">
+																<span class="new-price">$279.99</span>
+															</div>
+															<div class="pro-rating">
+																<img src="{%static 'img/rating/rating.png'%}" alt="" />
+															</div>
+														</div>
+														<div class="product-reveiw">
+															The 30-inch Apple Cinema HD Display delivers an amazing 2560
+															x
+															1600 pixel resolution. Designed specifically for the
+															creative
+															professional, this display provides more space for easier
+															access
+															to all the tools and palettes needed to edit, format and
+															composite your work. Combine this display with a M . . .<a
+																class="readmore" href="#">Read more</a>
+														</div>
+														<div class="action">
+															<div class="add-to-cart">
+																<a href="#">Add to cart</a>
+															</div>
+															<div class="add-to-link">
+																<a class="add-to-wishlist" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to Wish List">
+																	<i class="fa fa-heart-o"></i>
+																	Add to Wish List
+																</a>
+																<a class="add-to-compare" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to compare">
+																	<i class="fa fa-signal"></i>
+																	Add to compare
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- single blog end -->
+										<!-- single blog start -->
+										<div class="product-single">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="product-img">
+														<span class="new">New</span>
+														<span class="discount">-10%</span>
+														<a href="#">
+															<img class="primary-img" src="{%static 'img/product/4.png'%}"
+																alt="" />
+															<img class="secondary-img" src="{%static 'img/product/10.png'%}"
+																alt="" />
+														</a>
+													</div>
+												</div>
+												<div class="col-md-8">
+													<div class="product-details">
+														<div class="product-content">
+															<h2><a href="#">ipsum sit</a></h2>
+															<div class="pro-price">
+																<span class="new-price">$279.99</span>
+															</div>
+															<div class="pro-rating">
+																<img src="{%static 'img/rating/rating.png'%}" alt="" />
+															</div>
+														</div>
+														<div class="product-reveiw">
+															Engineered with pro-level features and performance, the
+															12.3-effective-megapixel D300 combines brand new
+															technologies
+															with advanced features inherited from Nikon's newly
+															announced D3
+															professional digital SLR camera to offer serious
+															photographers
+															remarkable performance combined with agility. . . .<a
+																class="readmore" href="#">Read more</a>
+														</div>
+														<div class="action">
+															<div class="add-to-cart">
+																<a href="#">Add to cart</a>
+															</div>
+															<div class="add-to-link">
+																<a class="add-to-wishlist" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to Wish List">
+																	<i class="fa fa-heart-o"></i>
+																	Add to Wish List
+																</a>
+																<a class="add-to-compare" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to compare">
+																	<i class="fa fa-signal"></i>
+																	Add to compare
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- single blog end -->
+										<!-- single blog start -->
+										<div class="product-single">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="product-img">
+														<span class="new">New</span>
+														<span class="discount">-10%</span>
+														<a href="#">
+															<img class="primary-img" src="{%static 'img/product/9.png'%}"
+																alt="" />
+															<img class="secondary-img" src="{%static 'img/product/16.png'%}"
+																alt="" />
+														</a>
+													</div>
+												</div>
+												<div class="col-md-8">
+													<div class="product-details">
+														<div class="product-content">
+															<h2><a href="#">mattis sem</a></h2>
+															<div class="pro-price">
+																<span class="new-price">$279.99</span>
+															</div>
+															<div class="pro-rating">
+																<img src="{%static 'img/rating/rating.png'%}" alt="" />
+															</div>
+														</div>
+														<div class="product-reveiw">
+															Video in your pocket. Its the small iPod with one very big
+															idea:
+															video. The worlds most popular music player now lets you
+															enjoy
+															movies, TV shows, and more on a two-inch display thats 65%
+															brighter than before.Cover Flow.Browse through your music
+															collection by flipping throu . . .<a class="readmore"
+																href="#">Read more</a>
+														</div>
+														<div class="action">
+															<div class="add-to-cart">
+																<a href="#">Add to cart</a>
+															</div>
+															<div class="add-to-link">
+																<a class="add-to-wishlist" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to Wish List">
+																	<i class="fa fa-heart-o"></i>
+																	Add to Wish List
+																</a>
+																<a class="add-to-compare" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to compare">
+																	<i class="fa fa-signal"></i>
+																	Add to compare
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- single blog end -->
+										<!-- single blog start -->
+										<div class="product-single">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="product-img">
+														<span class="new">New</span>
+														<span class="discount">-10%</span>
+														<a href="#">
+															<img class="primary-img" src="{%static 'img/product/17.png'%}"
+																alt="" />
+															<img class="secondary-img" src="{%static 'img/product/24.png'%}"
+																alt="" />
+														</a>
+													</div>
+												</div>
+												<div class="col-md-8">
+													<div class="product-details">
+														<div class="product-content">
+															<h2><a href="#">nec odio</a></h2>
+															<div class="pro-price">
+																<span class="new-price">$279.99</span>
+															</div>
+															<div class="pro-rating">
+																<img src="{%static 'img/rating/rating.png'%}" alt="" />
+															</div>
+														</div>
+														<div class="product-reveiw">
+															Stop your co-workers in their tracks with the stunning new
+															30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship
+															monitor features best-in-class performance and presentation
+															features on a huge wide-aspect screen while letting you work
+															as
+															comfortably as possible - you might even forget you'r . .
+															.<a class="readmore" href="#">Read more</a>
+														</div>
+														<div class="action">
+															<div class="add-to-cart">
+																<a href="#">Add to cart</a>
+															</div>
+															<div class="add-to-link">
+																<a class="add-to-wishlist" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to Wish List">
+																	<i class="fa fa-heart-o"></i>
+																	Add to Wish List
+																</a>
+																<a class="add-to-compare" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to compare">
+																	<i class="fa fa-signal"></i>
+																	Add to compare
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- single blog end -->
+										<!-- single blog start -->
+										<div class="product-single">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="product-img">
+														<span class="new">New</span>
+														<span class="discount">-10%</span>
+														<a href="#">
+															<img class="primary-img" src="{%static 'img/product/2.png'%}"
+																alt="" />
+															<img class="secondary-img" src="{%static 'img/product/1.png'%}"
+																alt="" />
+														</a>
+													</div>
+												</div>
+												<div class="col-md-8">
+													<div class="product-details">
+														<div class="product-content">
+															<h2><a href="#">Palm Treo Pro</a></h2>
+															<div class="pro-price">
+																<span class="new-price">$279.99</span>
+															</div>
+															<div class="pro-rating">
+																<img src="{%static 'img/rating/rating.png'%}" alt="" />
+															</div>
+														</div>
+														<div class="product-reveiw">
+															Redefine your workday with the Palm Treo Pro smartphone.
+															Perfectly balanced, you can respond to business and personal
+															email, stay on top of appointments and contacts, and use
+															Wi-Fi
+															or GPS when you’re out and about. Then watch a video on
+															YouTube,
+															catch up with news and sports on the web, or list . . .<a
+																class="readmore" href="#">Read more</a>
+														</div>
+														<div class="action">
+															<div class="add-to-cart">
+																<a href="#">Add to cart</a>
+															</div>
+															<div class="add-to-link">
+																<a class="add-to-wishlist" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to Wish List">
+																	<i class="fa fa-heart-o"></i>
+																	Add to Wish List
+																</a>
+																<a class="add-to-compare" href="#"
+																	data-bs-toggle="tooltip" data-placement="top"
+																	title="Add to compare">
+																	<i class="fa fa-signal"></i>
+																	Add to compare
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- single blog end -->
+									</div>
+								</div>
+							</div>
+							<!-- End Tab Bar -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- shop page area end -->
+	<!-- ours-brand-area start-->
+	<div class="ours-brand-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-heading">
+						<h3>Ours Brand</h3>
+					</div>
+					<div class="brand-crousel indicator-style">
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ours-brand-area end-->
+	<!-- footer start-->
+	<script src="{%static 'js/productPage.js' %}"></script>
+	{%endblock%}

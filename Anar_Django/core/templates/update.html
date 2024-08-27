@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block title%}<title>Create || Boloba</title> {%endblock%}
+
+{%block content%}
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.errors %}
+                    <ul class="errorlist">
+                        {% for error in field.errors %}
+                            <li class="alert alert-danger">{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+            
+                {% endif %}
+            </div>
+        {% endfor %}
+        
+        <div class="form-group form-group-button">
+            <button class="custom-button" type="submit"><span>Update</span></button>
+        </div>
+    </form>
+</div>
+{%endblock%}

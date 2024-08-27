@@ -1,0 +1,645 @@
+
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block title%}<title>Single Product || Boloba</title>{%endblock%}
+
+{%block content%}
+	<!-- single page area start-->
+	<div class="single-page-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="left-sidebar-title">
+						<ul class="page-menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a class="active" href="#">adipiscing elit</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="zoomWrapper">
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="{{data.brand}}">
+								<div class="single-pro-tab-img">
+									<img class="zoom1" src="{{data.image.url}}" alt=""
+										data-zoom-image="{{data.image.url}}">
+								</div>
+							</div>
+							{%for i in images%}
+							<div role="tabpanel" class="tab-pane" id="{{i.title}}">
+								<div class="single-pro-tab-img">
+									<img class="zoom1" src="{{i.image.url}}" alt=""
+										data-zoom-image="{{i.image.url}}">
+								</div>
+							</div>
+
+							{%endfor%}
+							<!-- <div role="tabpanel" class="tab-pane" id="camera">
+								<div class="single-pro-tab-img">
+									<img class="zoom1" src="{%static 'img/product/5.png'%}" alt=""
+										data-zoom-image="{%static 'img/zoom/5.png'%}">
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="watch">
+								<div class="single-pro-tab-img">
+									<img class="zoom1" src="{%static 'img/product/21.png'%}" alt=""
+										data-zoom-image="{%static 'img/zoom/21.png'%}">
+								</div>
+							</div> -->
+						</div>
+						<!-- Nav tabs -->
+						<ul class="single-pro-tab nav" role="tablist">
+							<li role="presentation">
+								<a class="active" href="#{{data.brand}}" aria-controls="{{data.brand}}" role="tab" data-bs-toggle="tab"><img
+										src="{{data.image.url}}" alt=""></a>
+							</li>
+							{%for i in images%}
+							
+							<li role="presentation">
+								<a href="#{{i.title}}" aria-controls="{{i.title}}" role="tab" data-bs-toggle="tab"><img
+										src="{{i.image.url}}" alt=""></a>
+							</li>
+							{%endfor%}
+							<!-- <li role="presentation">
+								<a href="#camera" aria-controls="camera" role="tab" data-bs-toggle="tab"><img
+										src="{%static 'img/product/1.png'%}" alt=""></a>
+							</li>
+							<li role="presentation">
+								<a href="#watch" aria-controls="watch" role="tab" data-bs-toggle="tab"><img
+										src="{%static 'img/product/21.png'%}" alt=""></a>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-6">
+					<div class="product-details">
+						<div class="product-content">
+							<h2><a href="#">{{data.name}}</a></h2>
+							<div class="pro-rating">
+								<img src="{%static 'img/rating/rating.png'%}" alt="" />
+								<span>
+									<a class="reviewtab">{{data.star}}</a>
+									/
+									<a class="reviewtab">10</a>
+								</span>
+							</div>
+							<div class="pro-price">
+								<span class="new-price">${{data.price}}</span>
+								{%if data.delprice%}
+								<span class="old-price">${{data.delprice}}</span>
+								{%endif%}
+							</div>
+						</div>
+						<div class="product-reveiw">
+							{{data.desgription}}
+						</div>
+						<div class="product-details-list">
+							<ul>
+								<li>brand:<a href="#">{{data.brand}}</a></li>
+								<li>Reward Points:<span>{{data.RewardPoints}}</span></li>
+								<li>Availability:<span>{{data.Availability}}</span></li>
+							</ul>
+						</div>
+						<div class="action">
+							<div class="cart-plus-minus">
+								<form action="#">
+									<input type="number" value="1" />
+								</form>
+							</div>
+							<div class="add-to-cart">
+								<a href="#">Add to cart</a>
+							</div>
+						</div>
+						<div class="add-to-link">
+							<a class="add-to-wishlist" href="#" data-bs-toggle="tooltip" data-placement="top"
+								title="Add to Wish List">
+								<i class="fa fa-heart-o"></i>
+								Add to Wish List
+							</a>
+							<a class="add-to-compare" href="#" data-bs-toggle="tooltip" data-placement="top"
+								title="Add to compare">
+								<i class="fa fa-signal"></i>
+								Add to compare
+							</a>
+							<a class="add-to-email" href="#" data-bs-toggle="tooltip" data-placement="top"
+								title="Send to email">
+								<i class="fa fa-envelope-o"></i>
+								Send to email
+							</a>
+						</div>
+					</div>
+					<div class="able-option">
+						<h3>Available Options</h3>
+						<label>Select</label>
+						<select class="form-control">
+							<option value=""> --- Please Select ---</option>
+							<option value=""> Red</option>
+							<option value="">Blue</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="section-heading">
+								<h3>Related Products</h3>
+							</div>
+						</div>
+					</div>
+					<div class="single-product-right">
+						<div class="gutter-space-30">
+							<div class="single-product-crousel">
+								<div class="slide-item">
+									<div class="best-seller-single">
+										<div class="product-single">
+											<div class="product-img">
+												<a href="#">
+													<img class="primary-img" src="{%static 'img/product/17.png'%}" alt="" />
+												</a>
+											</div>
+											<div class="product-content">
+												<h2><a href="#">Aenean qua</a></h2>
+												<div class="pro-price">
+													<span class="new-price">$159.00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-single">
+											<div class="product-img">
+												<a href="#">
+													<img class="primary-img" src="{%static 'img/product/19.png'%}" alt="" />
+												</a>
+											</div>
+											<div class="product-content">
+												<h2><a href="#">Aenean qua</a></h2>
+												<div class="pro-price">
+													<span class="new-price">$159.00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-single">
+											<div class="product-img">
+												<a href="#">
+													<img class="primary-img" src="{%static 'img/product/18.png'%}" alt="" />
+												</a>
+											</div>
+											<div class="product-content">
+												<h2><a href="#">Aenean qua</a></h2>
+												<div class="pro-price">
+													<span class="new-price">$159.00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-single bestseller-style">
+											<div class="product-img">
+												<a href="#">
+													<img class="primary-img" src="{%static 'img/product/10.png'%}" alt="" />
+												</a>
+											</div>
+											<div class="product-content">
+												<h2><a href="#">Aenean qua</a></h2>
+												<div class="pro-price">
+													<span class="new-price">$159.00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide-item">
+									<div class="best-seller-single">
+										<div class="product-single">
+											<div class="product-img">
+												<a href="#">
+													<img class="primary-img" src="{%static 'img/product/10.png'%}" alt="" />
+												</a>
+											</div>
+											<div class="product-content">
+												<h2><a href="#">Aenean qua</a></h2>
+												<div class="pro-price">
+													<span class="new-price">$159.00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-single">
+											<div class="product-img">
+												<a href="#">
+													<img class="primary-img" src="{%static 'img/product/12.png'%}" alt="" />
+												</a>
+											</div>
+											<div class="product-content">
+												<h2><a href="#">Aenean qua</a></h2>
+												<div class="pro-price">
+													<span class="new-price">$90.00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-single">
+											<div class="product-img">
+												<a href="#">
+													<img class="primary-img" src="{%static 'img/product/14.png'%}" alt="" />
+												</a>
+											</div>
+											<div class="product-content">
+												<h2><a href="#">Aenean qua</a></h2>
+												<div class="pro-price">
+													<span class="new-price">$99.00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-single bestseller-style">
+											<div class="product-img">
+												<a href="#">
+													<img class="primary-img" src="{%static 'img/product/13.png'%}" alt="" />
+												</a>
+											</div>
+											<div class="product-content">
+												<h2><a href="#">Aenean qua</a></h2>
+												<div class="pro-price">
+													<span class="new-price">$159.00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="product-description-tab">
+						<!-- tab bar -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li><a class="active" href="#product-des" data-bs-toggle="tab">Description</a></li>
+							<li><a href="#product-rev" data-bs-toggle="tab">Reviews (0)</a></li>
+						</ul>
+						<!-- Tab Content -->
+						<div class="tab-content">
+							<div class="tab-pane active" id="product-des">
+								<p>Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR
+									category', while we're not typically too concerned with marketing talk this
+									particular statement is clearly pretty accurate. The EOS 5D is unlike any previous
+									digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor
+									(12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D,
+									although in your hand it feels noticeably 'chunkier'). The EOS 5D is aimed to slot
+									in between the EOS 20D and the EOS-1D professional digital SLR's, an important
+									difference when compared to the latter is that the EOS 5D doesn't have any
+									environmental seals. While Canon don't specifically refer to the EOS 5D as a
+									'professional' digital SLR it will have obvious appeal to professionals who want a
+									high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt
+									appeal to current EOS 20D owners (although lets hope they've not bought too many
+									EF-S lenses...) äë </p>
+							</div>
+							<div class="tab-pane" id="product-rev">
+								<div class="row">
+									<div class="col-lg-5">
+										<p>There are no reviews for this product.</p>
+									</div>
+									<div class="col-lg-7">
+										<div class="product-rev-right">
+											<h2>Write a review</h2>
+											<div class="porduct-rev-right-form">
+												<form action="#" class="product-form">
+													<div class="form-group">
+														<label>Your Name</label>
+														<input type="text" class="form-control" required="required">
+													</div>
+													<div class="form-group">
+														<label>Your Review</label>
+														<textarea class="form-control" rows="5"
+															required="required"></textarea>
+														<div class="help-block mt-2">
+															<span class="text-danger">Note:</span>
+															HTML is not translated!
+														</div>
+													</div>
+													<div class="form-group">
+														<label>Rating</label>
+														Bad
+														<input type="radio" value="1" name="rating" />
+														<input type="radio" value="2" name="rating" />
+														<input type="radio" value="3" name="rating" />
+														<input type="radio" value="4" name="rating" />
+														<input type="radio" value="5" name="rating" />
+														Good
+													</div>
+													<div class="form-goroup form-group-button">
+														<button class="custom-button" type="submit"
+															value="submit"><span>Continue</span></button>
+													</div>
+												</form>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- single page area end-->
+	<!-- features-product-area start-->
+	<div class="features-product-area shop-page-features">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-heading">
+						<h3>Random Products</h3>
+					</div>
+					<div class="gutter-space-30">
+						<div class="features-crousel indicator-style">
+							{%for i in filterData%}
+							<div class="slide-item">
+								<div class="product-single">
+									<div class="product-img">
+										<a href="{%url 'singleProduct' i.pk%}">
+											<img class="primary-img" src="{{i.image.url}}" alt="" />
+											<img class="secondary-img" src="{{i.imageHover.url}}" alt="" />
+										</a>
+									</div>
+									<div class="product-content">
+										<h2><a href="#">{{i.name}}</a></h2>
+										<div class="pro-price">
+											<span class="new-price">${{i.price}}</span>
+											{%if i.delprice%}
+											<span class="old-price">${{i.delprice}}</span>
+											{%endif%}
+										</div>
+										<div class="pro-rating">
+											<img src="{%static 'img/rating/rating.png'%}" alt="" />
+										</div>
+									</div>
+									<div class="action">
+										<div class="add-to-cart">
+											<a href="#">Add to cart</a>
+										</div>
+										<div class="add-to-link">
+											<a class="add-to-wishlist" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to Wish List">
+												<i class="fa fa-heart-o"></i>
+												Add to Wish List
+											</a>
+											<a class="add-to-compare" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to compare">
+												<i class="fa fa-signal"></i>
+												Add to compare
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							{%endfor%}
+							<!-- <div class="slide-item">
+								<div class="product-single">
+									<div class="product-img">
+										<span class="new">New</span>
+										<a href="#">
+											<img class="primary-img" src="{%static 'img/product/12.png'%}" alt="" />
+											<img class="secondary-img" src="{%static 'img/product/1.png'%}" alt="" />
+										</a>
+									</div>
+									<div class="product-content">
+										<h2><a href="#">aptent taciti</a></h2>
+										<div class="pro-price">
+											<span class="new-price">$20.00</span>
+										</div>
+										<div class="pro-rating">
+											<img src="{%static 'img/rating/rating.png'%}" alt="" />
+										</div>
+									</div>
+									<div class="action">
+										<div class="add-to-cart">
+											<a href="#">Add to cart</a>
+										</div>
+										<div class="add-to-link">
+											<a class="add-to-wishlist" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to Wish List">
+												<i class="fa fa-heart-o"></i>
+												Add to Wish List
+											</a>
+											<a class="add-to-compare" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to compare">
+												<i class="fa fa-signal"></i>
+												Add to compare
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="slide-item">
+								<div class="product-single">
+									<div class="product-img">
+										<span class="new">New</span>
+										<span class="discount">-20%</span>
+										<a href="#">
+											<img class="primary-img" src="{%static 'img/product/15.png'%}" alt="" />
+											<img class="secondary-img" src="{%static 'img/product/6.png'%}" alt="" />
+										</a>
+									</div>
+									<div class="product-content">
+										<h2><a href="#">Aenean qua</a></h2>
+										<div class="pro-price">
+											<span class="new-price">$159.00</span>
+											<span class="new-price">$199.99</span>
+										</div>
+										<div class="pro-rating">
+											<img src="{%static 'img/rating/rating.png'%}" alt="" />
+										</div>
+									</div>
+									<div class="action">
+										<div class="add-to-cart">
+											<a href="#">Add to cart</a>
+										</div>
+										<div class="add-to-link">
+											<a class="add-to-wishlist" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to Wish List">
+												<i class="fa fa-heart-o"></i>
+												Add to Wish List
+											</a>
+											<a class="add-to-compare" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to compare">
+												<i class="fa fa-signal"></i>
+												Add to compare
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="slide-item">
+								<div class="product-single">
+									<div class="product-img">
+										<span class="new">New</span>
+										<span class="discount">-90%</span>
+										<a href="#">
+											<img class="primary-img" src="{%static 'img/product/8.png'%}" alt="" />
+											<img class="secondary-img" src="{%static 'img/product/19.png'%}" alt="" />
+										</a>
+									</div>
+									<div class="product-content">
+										<h2><a href="#">blandit vel</a></h2>
+										<div class="pro-price">
+											<span class="new-price">$99.00</span>
+											<span class="old-price">$1,000.00</span>
+										</div>
+										<div class="pro-rating">
+											<img src="{%static 'img/rating/rating.png'%}" alt="" />
+										</div>
+									</div>
+									<div class="action">
+										<div class="add-to-cart">
+											<a href="#">Add to cart</a>
+										</div>
+										<div class="add-to-link">
+											<a class="add-to-wishlist" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to Wish List">
+												<i class="fa fa-heart-o"></i>
+												Add to Wish List
+											</a>
+											<a class="add-to-compare" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to compare">
+												<i class="fa fa-signal"></i>
+												Add to compare
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="slide-item">
+								<div class="product-single">
+									<div class="product-img">
+										<span class="new">New</span>
+										<a href="#">
+											<img class="primary-img" src="{%static 'img/product/16.png'%}" alt="" />
+											<img class="secondary-img" src="{%static 'img/product/1.png'%}" alt="" />
+										</a>
+									</div>
+									<div class="product-content">
+										<h2><a href="#">cubilia Cura</a></h2>
+										<div class="pro-price">
+											<span class="new-price">$1,000.00</span>
+										</div>
+										<div class="pro-rating">
+											<img src="{%static 'img/rating/rating.png'%}" alt="" />
+										</div>
+									</div>
+									<div class="action">
+										<div class="add-to-cart">
+											<a href="#">Add to cart</a>
+										</div>
+										<div class="add-to-link">
+											<a class="add-to-wishlist" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to Wish List">
+												<i class="fa fa-heart-o"></i>
+												Add to Wish List
+											</a>
+											<a class="add-to-compare" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to compare">
+												<i class="fa fa-signal"></i>
+												Add to compare
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="slide-item">
+								<div class="product-single">
+									<div class="product-img">
+										<a href="#">
+											<img class="primary-img" src="{%static 'img/product/1.png'%}" alt="" />
+											<img class="secondary-img" src="{%static 'img/product/6.png'%}" alt="" />
+										</a>
+									</div>
+									<div class="product-content">
+										<h2><a href="#">Fusce nec</a></h2>
+										<div class="pro-price">
+											<span class="new-price">$100.00</span>
+										</div>
+										<div class="pro-rating">
+											<img src="{%static 'img/rating/rating.png'%}" alt="" />
+										</div>
+									</div>
+									<div class="action">
+										<div class="add-to-cart">
+											<a href="#">Add to cart</a>
+										</div>
+										<div class="add-to-link">
+											<a class="add-to-wishlist" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to Wish List">
+												<i class="fa fa-heart-o"></i>
+												Add to Wish List
+											</a>
+											<a class="add-to-compare" href="#" data-bs-toggle="tooltip"
+												data-placement="top" title="Add to compare">
+												<i class="fa fa-signal"></i>
+												Add to compare
+											</a>
+										</div>
+									</div>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- features-product-area end-->
+	<!-- ours-brand-area start-->
+	<div class="ours-brand-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-heading">
+						<h3>Ours Brand</h3>
+					</div>
+					<div class="brand-crousel indicator-style">
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ours-brand-area end-->
+	<!-- footer start-->
+	{%endblock%}

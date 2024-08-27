@@ -1,0 +1,164 @@
+
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block title%}<title>Wishlist || Boloba</title>{%endblock%}
+
+{%block content%}
+	<!-- wishlist area start-->
+	<div class="wishlist-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="left-sidebar-title">
+						<ul class="page-menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="index.html">Account</a></li>
+							<li><a class="active" href="#">Login</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 order-2 order-lg-1 pt-3 pt-lg-0">
+					<div class="list-group account-list">
+						<a class="list-group-item account-list-first" href="#">My Account</a>
+						<a class="list-group-item" href="#">Edit Account</a>
+						<a class="list-group-item" href="#">Password</a>
+						<a class="list-group-item" href="#">Address Book</a>
+						<a class="list-group-item" href="#">Wish List</a>
+						<a class="list-group-item" href="#">Order History</a>
+						<a class="list-group-item" href="#">Downloads</a>
+						<a class="list-group-item" href="#">Recurring payments</a>
+						<a class="list-group-item" href="#">Reward Points</a>
+						<a class="list-group-item" href="#">Returns</a>
+						<a class="list-group-item" href="#">Transactions</a>
+						<a class="list-group-item" href="#">Newsletter</a>
+						<a class="list-group-item" href="#">Logout</a>
+					</div>
+				</div>
+				<div class="col-lg-9 order-1 order-lg-2">
+					<div class="page-title">
+						<h1>My Wish List</h1>
+					</div>
+					<div class="cart-table">
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<td class="text-center">Image</td>
+										<td class="text-left">Product Name</td>
+										<td class="text-left">Model</td>
+										<td class="text-right">Stock</td>
+										<td class="text-center">Unit Price</td>
+										<td class="text-center">Action</td>
+									</tr>
+								</thead>
+								<tr>
+									<td class="text-center"><a href="#"><img src="{%static 'img/wishlist/1.png'%}"
+												alt="" /></a></td>
+									<td class="text-left"><a href="#">Aenean qua</a></td>
+									<td class="text-left">SAM1</td>
+									<td class="text-right">In Stock</td>
+									<td class="text-right">
+										<b>$159.00</b>
+										<s>$199.99</s>
+									</td>
+									<td class="text-right">
+										<button class="btn btn-primary" title="" data-bs-toggle="tooltip"
+											onclick="cart.add('49');" type="button" data-original-title="Add to Cart">
+											<i class="fa fa-shopping-cart"></i>
+										</button>
+										<a class="btn btn-danger mt-0" title="" data-bs-toggle="tooltip"
+											href="http://boloba.demo.towerthemes.com/index.php?route=account/wishlist&amp;remove=49"
+											data-original-title="Remove">
+											<i class="fa fa-times"></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center"><a href="#"><img src="{%static 'img/wishlist/2.png'%}"
+												alt="" /></a></td>
+									<td class="text-left"><a href="#">cubilia Cura</a></td>
+									<td class="text-left">Product 3</td>
+									<td class="text-right">In Stock</td>
+									<td class="text-right">
+										<b>$80.00</b>
+										<s>$100.00</s>
+									</td>
+									<td class="text-right">
+										<button class="btn btn-primary" title="" data-bs-toggle="tooltip"
+											onclick="cart.add('49');" type="button" data-original-title="Add to Cart">
+											<i class="fa fa-shopping-cart"></i>
+										</button>
+										<a class="btn btn-danger mt-0" title="" data-bs-toggle="tooltip"
+											href="http://boloba.demo.towerthemes.com/index.php?route=account/wishlist&amp;remove=49"
+											data-original-title="Remove">
+											<i class="fa fa-times"></i>
+										</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="pull-right">
+						<button class="custom-button" type="submit" value="submit">
+							<span>Continue</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- wishlist area end-->
+	<!-- ours-brand-area start-->
+	<div class="ours-brand-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-heading">
+						<h3>Ours Brand</h3>
+					</div>
+					<div class="brand-crousel indicator-style">
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+						<div class="brand-single">
+							<a href="#"><img src="{%static 'img/brand/1.png'%}" alt="" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ours-brand-area end-->
+	<!-- footer start-->
+	{%endblock%}
